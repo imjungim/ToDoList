@@ -1,0 +1,93 @@
+body {
+  background-repeat: no-repeat;
+  background-image: url(image/background.jpg);
+  background-size: cover;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+  background-color: white;
+  max-width: 50vw;
+  min-height: 100vh; /* vh 뷰하이트 내가 보는 화면의 높이를 설정 */
+}
+.title{
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.task-area {
+  border: 1px solid lightgray;
+  border-radius: 7px;
+}
+
+.task-tabs {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+
+.task-tabs div {
+  padding: 1em;
+}
+
+#under-line {
+  height: 4px;
+  background-color: pink;
+  position: absolute;
+  width: 50px;
+  left: 0px;
+  top: 52px;
+  padding: 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+  
+}
+#task-input{
+  width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 7px;
+}
+
+.task-done{
+    text-decoration: line-through; /*텍스트 밑줄 */
+    background-color: lightgray;
+    transition: 0.5s;
+
+}
+
+.task-tabs div{ 
+  cursor : pointer; /*커서 손모양 */
+}
+
+.input-area{
+
+  margin-bottom: 10px;
+}
+
+.fa-check {
+  color: limegreen;
+}
+
+.fa-trash {
+  color: red;
+  border: none;
+}
+.fa-undo-alt {
+  color: lightslategray;
+  border: none;
+}
+
+#add-button{
+  border-radius: 7px;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+button {
+  border: none;
+}
