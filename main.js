@@ -130,24 +130,6 @@ function filter(event) {
   }
   render();
 }
-  // if (mode === "all") {
-  //   render();
-  // } else if (mode === "ongoing") {
-  //   for (let i = 0; i < taskList.length; i++) {
-  //     if (taskList[i].isComplete == false) {
-  //       filterList.push(taskList[i]);
-  //     }
-  //     render();
-  //   }
-  // } else if (mode == "done") {
-  //   for (let i = 0; i < taskList.length; i++) {
-  //     if (taskList[i].isComplete == true) {
-  //       filterList.push(taskList[i]);
-  //     }
-  //   }
-
-  // }
-
 
 function randomIDGenerate() {
   return "_" + Math.random().toString(36).substr(2, 9);
