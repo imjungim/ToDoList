@@ -1,14 +1,3 @@
-//유저가 값을 입력
-//+버튼을 클릭 > 할일이 추가된다
-//delete 버튼을 누르면 할일이 삭제된다
-//check버튼을 누르면 할일이 끝나고 밑줄생성 + 다시 할일로 되돌아가기도 생성
-//1) check 버튼을 클릭하는 순간 컴플리트 값이 false에서 true로 (check버튼은 html이 아닌 js에 있다. 버튼에 클릭이벤트를 지정-onclick)
-//2) true이면 끝난것으로 간주하고 밑줄생성하기
-//3) false이면 안끝난것으로 간주하고 그대로
-//진행중 끝남 탭을 누르면, 언더바가 이동한다
-//끝남 탭은 끝난아이템만, 진행중-진행중인것만 나옴.
-//all탭 누르면 전체아이템으로 돌아옴
-
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
 let tabs = document.querySelectorAll(".task-tabs div");
@@ -78,11 +67,16 @@ function render() {
     }
   }
   document.getElementById("task-board").innerHTML = resultHTML;
+  let totalValue = `<div>할일 갯수 :  ${taskList.length} </div>`;
+  document.querySelector(".total-count").innerHTML = totalValue;
+  let completedValue = `<div>완료된 갯수 : ${
+    taskList.filter((item) => item.isComplete === true).length
+  } </div>`;
+  document.querySelector(".completed-count").innerHTML = completedValue;
 }
 
 function toggleComplete(id) {
   //어떤아이템이 선택됐는지 id를 생성.
-  console.log("id:", id);
   for (let i = 0; i < taskList.length; i++) {
     if (taskList[i].id == id) {
       taskList[i].isComplete = !taskList[i].isComplete;
@@ -93,13 +87,12 @@ function toggleComplete(id) {
 }
 
 function taskDelete(id) {
-  console.log("삭제:", id);
   for (let i = 0; i < taskList.length; i++) {
     if (taskList[i].id == id) {
       taskList.splice(i, 1);
     }
   }
-  console.log(taskList);
+ 
   filter();
 }
 
