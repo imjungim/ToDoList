@@ -1,5 +1,5 @@
 # ToDoList
-![image](https://user-images.githubusercontent.com/97380925/187111986-68b7d391-c7e5-480d-b90f-16ca599cccdf.png)
+![To Do List - Chrome 2022-11-23 오후 7_03_12](https://user-images.githubusercontent.com/97380925/203519702-4230827e-39bb-4aea-a04b-215550213d20.png)
 
 할일을 추가, 제거 상태별 할일을 확인할 수 있습니다.
 
