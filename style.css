@@ -13,10 +13,22 @@ body {
   height: 100%;
   min-height: 100vh; /* vh 뷰하이트 내가 보는 화면의 높이를 설정 */
 }
+
+.title-section {
+  display: flex;
+  justify-content: space-between;
+}
+
 .title{
   padding-top: 10px;
   margin-bottom: 20px;
 }
+
+.clock{
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
 .task-area {
   border: 1px solid lightgray;
   border-radius: 7px;
