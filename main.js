@@ -1,9 +1,17 @@
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
 let tabs = document.querySelectorAll(".task-tabs div");
+let clock = document.querySelector(".clock");
 let taskList = [];
 let mode = "all";
 let filterList = [];
+
+//현재시간
+function getClock(){
+clock.innerText = new Date().toLocaleTimeString();
+}
+getClock();
+setInterval(getClock,1000);
 
 for (let i = 1; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (event) {
