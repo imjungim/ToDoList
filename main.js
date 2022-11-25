@@ -18,7 +18,6 @@ for (let i = 1; i < tabs.length; i++) {
     filter(event);
   });
 }
-console.log(tabs);
 addButton.addEventListener("click", addTask);
 
 taskInput.addEventListener("keyup", function (event) {
@@ -42,8 +41,6 @@ function addTask() {
     taskList.push(task);
   }
   taskInput.value = "";
-  console.log(taskList);
-
   render();
 }
 
@@ -100,7 +97,6 @@ function taskDelete(id) {
       taskList.splice(i, 1);
     }
   }
- 
   filter();
 }
 
