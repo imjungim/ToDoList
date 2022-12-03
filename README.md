@@ -17,6 +17,6 @@
 * HTML
 * CSS
 * bootstrap
-* Vanila JavaScript
+* Vanilla JavaScript
 
 
